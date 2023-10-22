@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'Styles/style.css' %}">
+    <title>Toko Site</title>
+</head>
+<body>
+    <script>
+        var variable = 0;
+    </script>
+
+    <header class="head">
+        <ul class="liste" type="none">
+            <li class="item">Accueil</li>
+            <li class="item">mon CV</li>
+            <li class="item"><a href="ajout">A propos</a></li>
+  
+        </ul>
+    </header>
+    <div class="sous-ligne">
+       <div class="cercle" onclick="Ecrire()"></div>
+       <div class="cercles" onclick="Ecrire()"></div>
+       <div class="cercle" onclick="Ecrire()"></div>
+       <div class="cercles" onclick="Ecrire()"></div> 
+       <div class="cercle" onclick="Ecrire()"></div>
+       <div class="cercles" onclick="Ecrire()"></div>
+       <div class="cercle" onclick="Ecrire()"></div>
+       <div class="cercles" onclick="Ecrire()"></div> 
+    </div>
+    <br>
+
+    <div class="row">
+        <div class="cadran">
+           
+
+              <div class="deux">
+
+                <img src="{% static 'Images/toko.jpg' %}" class="toko" alt="">     
+              </div>        
+        </div>
+    </div>
+    <div class="row">
+        <div class="cadran">
+            <div class="nom" id="js_name">
+                
+                    <span class="t">T</span><span class="r">oko</span> <span class="t" id="m">M</span><span class="r">ichel</span>
+                
+            </div>
+   
+        </div>
+    </div>
+
+    <script>
+        function Ecrire()
+        {
+            let balise1 = "<span class='t'>M</span><span class='r'>ichel</span> <span class='t'>T</span><span class='r'>oko</span> "
+            let balise2 = "<span class='t'>T</span><span class='r'>oko</span> <span class='t'>M</span><span class='r'>ichel</span> "
+            let balise3 = "<span class='t'>D</span><span class='r'>eveloppeur</span> <span class='t'>P</span><span class='r'>ython</span>"
+            let balise4 = "<span class='t'>D</span><span class='r'>eveloppeur</span> <span class='t'>D</span><span class='r'>jango</span>"
+            
+            liste = [balise1, balise2, balise3, balise4]
+            document.getElementById('js_name').innerHTML = liste[variable]
+            variable ++
+
+            if(variable == liste['length'])
+            {
+                variable = 0
+            }
+            
+        }
+    </script>
+    
+    <div class="title" align="center"> 
+        <font face="Calibri">MES PROJETS</font>
+    </div>
+
+    <hr class="sub-line" align="center">
+    <div class="row1">
+        {% for elt in pro%} 
+        <a href="/{{ elt.nom }}">
+        <div class="iter">
+        <div class="photo">
+            <img src="{{ elt.url }}" class="img" alt="">
+        </div> 
+        <br>
+        <b>{{ elt.nom }}</b>
+        <hr>
+        {{ elt.description }}
+     <!-- Odit explicabo id rerum iste.
+     Libero quasi quia nesciunt iste.
+     Consequatur aspernatur dignissimos itaque eligendi! -->
+       <br>
+     <div class="tech">
+        {% for elm in elt.liste_tech %}
+        <a href="{{ elm.tech_name }}">
+          <div class="img-contents">
+            <img src="{{ elm.tech_pic.url }}" alt="">
+          </div>
+        </a>
+        {% endfor %}
+       
+
+     </div>
+
+    </div></a>
+    {% endfor %}
+    </div>
+
+    <div class="row2">
+        <div class="title" align="center">
+            Technologies que j'utilise
+            <br>
+            <br>
+            <hr class="sub-lin">
+        </div>
+        <div class="content">
+            {% for elt in techs %}
+            <div class="img-content">
+                <a href="{{ elt.tech_name    }}"><img src="{{elt.tech_pic.url}}" alt="{{elt.tech_name}}"></a>
+            </div>
+             {% endfor %}
+            
+        </div>
+    </div>
+    <br>
+    <br>
+
+    <footer>
+        <div class="container">
+            <p class="contact" align="center"> Contacts </p>
+            <hr class="sub-line">
+            <div class="contacts" align="center">
+                <a href=""><img src="{% static 'Images/whatsapp_32px.png' %}" alt="" class="img-contact"></a>
+                <a href=""><img src="{% static 'Images/twitter_32px.png' %}" alt="" class="img-contact"></a>
+                <a href="https://github.com/Tokomichel/"><img src="{% static 'Images/github_30px.png' %}" alt="" class="img-contact"></a>
+            </div>
+            <p class="e-mail" align="center">tokowouendeu@gmail.com</p>
+        </div>
+    </footer>
+
+</body>
+</html>

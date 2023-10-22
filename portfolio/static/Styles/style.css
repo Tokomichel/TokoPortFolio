@@ -1,0 +1,371 @@
+body
+{
+    /* background-color: rgb(6, 6, 49); */
+    /* background: linear-gradient(90deg, rgb(6, 6, 49), rgb(8, 60, 105)); */
+    background-color: rgb(231, 235, 237);
+    font-family: 'Helvetica', 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, Arial, sans-serif;
+    color: #333;
+}
+
+a
+{
+    text-decoration: none;
+    color: black;
+}
+
+span.t 
+{
+    color: rgb(120, 180, 233);
+    display: inline-block;
+    animation: 2s Animations;
+}
+
+
+/* 
+span.r
+{
+    
+   animation: 2s Animations1 0.6s;
+} */
+
+
+
+header
+{
+    display: flex;
+    justify-content: center;
+}
+
+.liste
+{
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+    background-color: rgb(184, 209, 231);
+    width: 55%;
+    padding: 7px;
+    border-radius: 8px;
+    font-size: 19px;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: all ease .67s;
+
+}
+
+.liste:hover
+{
+    background-color: rgb(120, 180, 233);
+
+}
+
+.item
+{
+    font-size: larger;
+    transition: all ease .65s;
+}
+
+
+.sous-ligne
+{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.cercle
+{
+    padding: 12px;
+    border-radius: 55%;
+    background-color: rgb(184, 209, 231);
+    border-width: 4px;
+    border-color: aliceblue;
+    display: flex;
+    width: 4px;
+    animation: alternate scale 2s infinite;
+    transition: all ease .67s;
+
+}
+
+.cercles
+{
+    padding: 12px;
+    border-radius: 55%;
+    background-color: rgb(184, 209, 231);
+
+    display: flex;
+    width: 4px;
+    animation: alternate-reverse scale 2s infinite;
+    transition: all ease .67s;
+}
+
+.cercles:hover
+{
+    background-color: rgb(120, 180, 233);
+}
+
+.cercle:hover
+{
+    background-color: rgb(120, 180, 233);
+}
+
+.row
+{
+    display: flex;
+    justify-content: center;
+    /* background-color: aquamarine; */
+
+    padding: 12px;
+    height: 50%;
+}
+
+.cadran
+{
+    width: 50%;
+    height: 50%;
+    border-width: 5px;
+    border-color: black;
+    display: flex;
+    justify-content: center;
+  
+    /* background-color: blue; */
+    
+}
+/* 
+fieldset
+{
+    display: flex;
+    box-shadow: 3px 3px 3px  rgba(71, 71, 71, 0.863);
+    border-radius: 8px;
+    font-size: larger;
+} */
+
+div.deux
+{
+
+  /* background-color: aquamarine; */
+}
+
+img.toko
+{
+    
+    height: 500px; 
+    border-radius: 870px;
+    animation: 3s Animations ;
+}
+
+.nom
+{
+    /* background-color: blueviolet; */
+    font-size: 4em;
+    font-family: 'Sitka Small';
+    margin-bottom: 200px;
+}
+
+div.title 
+{
+    margin-top: -40px;
+}
+
+hr.sub-line{
+    margin-top: -40px;
+}
+
+.row1
+{
+    /* background-color: rgb(184, 209, 231); */
+    display: flex;
+    justify-content: grid;
+    
+
+    width: 100%;
+    height: 700px;
+    padding-top: 155px;
+    margin-top: -100px;
+}
+
+hr.sub-line
+{
+   margin-top: 20px;
+   border-width: 0.1px;
+   height: 0.1px;
+   width: 40%;
+   background-color: rgb(104, 101, 101);
+   border-color: rgb(101, 100, 100);
+}
+
+.iter
+{
+    /* background-color: rgb(184, 209, 231); */
+    border-radius: 7px;
+    border-width: 7px;
+    border-color: rgba(48, 53, 58, 0.904);
+    padding: 15px;
+    margin: 8px;
+
+    width: 30%;
+    height: 45%;
+    box-shadow:1px 2px 5px 2px rgba(48, 53, 58, 0.781)  ;
+}
+
+.tech
+{
+    display: flex;
+    justify-content: grid;
+    margin-top: 12px;
+    height: 40px;
+    /* background-color: blueviolet; */
+}
+
+.tech .img-contents
+{
+    /* background-color: blue; */
+    margin: 0px 3px;
+}
+
+.tech .img-contents img
+{
+    width: 100%;
+    height: 40px; 
+    border-radius: 8px;
+}
+
+.gros-titre
+{
+    font-size: 2em;
+    font-family: 'Sitka Small';
+    margin-bottom: -110px;
+}
+
+.photo
+{
+    width: 100%;    
+}
+
+.img
+{
+    width: 100%;
+    height: 180px; 
+    border-radius: 8px;
+}
+
+.row2
+{
+    height: 700px;
+}
+
+.title
+{
+    /* background-color: rgb(184, 209, 231); */
+
+    font-size: 2em;
+    margin-top: 100px;
+}
+
+hr.sub-lin
+{
+   width: 40%;
+   border-width: 0.1px;
+   height: 0.1px;
+   background-color: gray;
+   border-color: gray;
+}
+
+.content
+{
+    /* box-shadow:0px 0px 4px 0px rgba(48, 53, 58, 0.781)  ;
+    background-color: white; */
+
+    display: flex;
+    justify-content: grid;
+
+    padding: 15px;
+}
+
+.img-content
+{
+    margin: 30px;
+}
+
+.img-content img
+{
+    width: 100%;
+    height: 180px; 
+    border-radius: 8px;
+}
+
+footer
+{
+    background-color: rgb(199, 203, 214);
+    display: flex;
+    justify-content: center;
+    font-size: larger;
+}
+
+footer .container
+{
+    width: 60%;
+}
+
+footer .container p.contact
+{
+    font-size: 1.4em;
+}
+
+hr.toko-line
+{
+    border-color: #333;    
+
+}
+
+footer .container .contacts
+{
+   justify-content: center;
+}
+
+img.img-contact
+{
+    height: 150%;
+    margin-left: 7px;
+    margin-right: 7px;
+}
+
+/* keyframes */
+@keyframes scale{
+    0%
+    {
+       transform: scale(0.8);
+    }
+}
+
+@keyframes Animations
+{
+    0%
+    {
+        opacity: 0;
+    }
+
+    50%
+    {
+        opacity: .6;
+    }
+    100%
+    {
+        opacity: 1;
+    }
+}
+
+@keyframes Animations1
+{
+    0%
+    {
+        opacity: 0;
+    }
+
+    50%
+    {
+        opacity: .4;
+    }
+    100%
+    {
+        opacity: 1;
+    }
+}
